@@ -1,0 +1,25 @@
+{
+  "name": "failable-result",
+  "version": "1.0.0",
+  "description": "Lightweight module representing failable result",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [],
+  "author": "Milan Gatyas <12131213@seznam.cz>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgjam/Nodejs.Modules.failable-result.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mgjam/Nodejs.Modules.failable-result/issues"
+  },
+  "homepage": "https://github.com/mgjam/Nodejs.Modules.failable-result#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "typescript": "^2.8.3"
+  }
+}
