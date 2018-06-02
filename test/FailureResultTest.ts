@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import * as FailableResult from "../index";
+import FailableResult from "../index";
 
 describe("FailureResult test", () => {
     it("Should create instance and execute correct lambda", () => {
