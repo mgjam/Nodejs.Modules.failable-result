@@ -1,8 +1,8 @@
-interface IFailableResult<TResult, TFailure> {
+export interface FailableResult<TResult, TFailure> {
     handle<T>(onSuccess: (result: TResult) => T, onFailure: (failure: TFailure) => T): T;
 }
 
-class FailureResult<TResult, TFailure> implements IFailableResult<TResult, TFailure> {
+class FailureResult<TResult, TFailure> implements FailableResult<TResult, TFailure> {
 
     private readonly failure: TFailure;
 
@@ -15,7 +15,7 @@ class FailureResult<TResult, TFailure> implements IFailableResult<TResult, TFail
     }
 }
 
-class SuccessResult<TResult, TFailure> implements IFailableResult<TResult, TFailure> {
+class SuccessResult<TResult, TFailure> implements FailableResult<TResult, TFailure> {
 
     private readonly result: TResult;
 
@@ -28,14 +28,13 @@ class SuccessResult<TResult, TFailure> implements IFailableResult<TResult, TFail
     }
 }
 
-const createResult = <TResult, TFailure>(result: TResult): IFailableResult<TResult, TFailure> =>
+const createResult = <TResult, TFailure>(result: TResult): FailableResult<TResult, TFailure> =>
     new SuccessResult(result);
 
-const createFailure = <TResult, TFailure>(failure: TFailure): IFailableResult<TResult, TFailure> =>
+const createFailure = <TResult, TFailure>(failure: TFailure): FailableResult<TResult, TFailure> =>
     new FailureResult(failure);
 
-export {
-    IFailableResult,
+export default {
     createResult,
     createFailure
 };
