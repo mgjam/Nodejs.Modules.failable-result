@@ -9,7 +9,7 @@
     "build": "tsc -p .",
     "watch": "tsc -w -p .",
     "test": "mocha --reporter spec test/**/*.js",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha build/test/**/*.js -- -R spec"
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/**/*.js -- -R spec"
   },
   "keywords": [],
   "author": "Milan Gatyas <12131213@seznam.cz>",
