@@ -34,7 +34,7 @@ const createResult = <TResult, TFailure>(result: TResult): FailableResult<TResul
 const createFailure = <TResult, TFailure>(failure: TFailure): FailableResult<TResult, TFailure> =>
     new FailureResult(failure);
 
-export default {
+export {
     createResult,
     createFailure
 };

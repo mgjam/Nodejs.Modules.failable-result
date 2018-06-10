@@ -1,14 +1,14 @@
 {
   "name": "failable-result",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Lightweight module representing failable result",
-  "main": "build/index",
-  "typings": "build/index",
+  "main": "index",
+  "typings": "index",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc -p .",
     "watch": "tsc -w -p .",
-    "test": "mocha --reporter spec build/test/**/*.js",
+    "test": "mocha --reporter spec test/**/*.js",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha build/test/**/*.js -- -R spec"
   },
   "keywords": [],
@@ -32,7 +32,7 @@
     "typescript": "^2.8.3"
   },
   "files": [
-    "build/index.js",
-    "build/index.d.ts"
+    "index.js",
+    "index.d.ts"
   ]
 }

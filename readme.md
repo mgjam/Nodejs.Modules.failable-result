@@ -16,7 +16,7 @@ npm run test
 ```js
 const lib = require("failable-result");
 
-const fun = b => b ? lib.default.createResult(b) : lib.default.createFailure(b);
+const fun = b => b ? lib.createResult(b) : lib.createFailure(b);
 
 [fun(true), fun(false)].forEach(x => x.handle(
     result => console.log(`result: [${result}]`),
